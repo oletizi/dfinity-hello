@@ -4,6 +4,17 @@
       "main": "src/hello/main.mo",
       "type": "motoko"
     },
+    "hello_test": {
+      "dependencies": ["hello"],
+      "frontend": {
+        "entrypoint": "src/hello_test/public/index.js"
+      },
+      "source": [
+        "src/hello_test",
+        "dist/hello_test"
+      ],
+      "type":"assets"
+    },
     "hello_assets": {
       "dependencies": [
         "hello"
@@ -23,7 +34,7 @@
       "packtool": ""
     }
   },
-  "dfx": "0.6.0",
+  "dfx": "0.6.4",
   "networks": {
     "local": {
       "bind": "127.0.0.1:8000",
